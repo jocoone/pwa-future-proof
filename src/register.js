@@ -8,8 +8,14 @@ const register = (swUrl, config) => {
         })
         .catch(() => console.error(`There was a problem registering ServiceWorker from: ${swUrl}`));
     });
-    return config;
   }
+
+  console.log('notification');
+  Notification.requestPermission(function(status) {
+    console.log('Notification permission status:', status);
+  });
+
+  return config;
 }
 
 export default register;
