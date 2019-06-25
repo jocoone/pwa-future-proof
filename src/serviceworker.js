@@ -6,11 +6,6 @@ self.addEventListener('push', event => {
     var options = {
       body: event.data.text(),
       icon: 'images/logo_128x128.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: '2'
-      }
     };
     event.waitUntil(
       self.registration.showNotification(event.data.text(), options)

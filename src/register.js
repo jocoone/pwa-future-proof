@@ -10,7 +10,6 @@ const register = (swUrl, config) => {
     });
   }
 
-  console.log('notification');
   Notification.requestPermission(function(status) {
     console.log('Notification permission status:', status);
   });
